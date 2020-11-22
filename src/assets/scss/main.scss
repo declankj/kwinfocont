@@ -1,3 +1,4 @@
+/*메인화면(home) 화면 스타일 scss*/
 .notice {
   padding-top : 20px;
   width: 72%;
@@ -12,6 +13,7 @@ ul,li { list-style: none; }
 #gallery { height: 178px; }
 
 #app {
+  padding-top:40px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

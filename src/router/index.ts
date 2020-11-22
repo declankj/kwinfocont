@@ -1,8 +1,15 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
+// 페이지별 component 를 import
 import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Info from '../views/Info.vue'
+import Bachelor from '../views/Bachelor.vue'
+import Curriculum from '../views/Curriculum.vue'
+import Community from '../views/Community.vue'
+import Apply from '../views/Apply.vue'
+
 Vue.use(VueRouter)
+// 주소별 페이지 라우팅 정의
 const routes: Array<RouteConfig> = [
   {
     path: '/',
@@ -10,12 +17,29 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: About
+    path: '/info',
+    name: 'Info',
+    component: Info
+  },
+  {
+    path: '/bachelor',
+    name: 'bachelor',
+    component: Bachelor
+  },
+  {
+    path: '/curriculum',
+    name: 'curriculum',
+    component: Curriculum
+  },
+  {
+    path: '/community',
+    name: 'community',
+    component: Community
+  },
+  {
+    path: '/apply',
+    name: 'apply',
+    component: Apply
   }
 ]
 

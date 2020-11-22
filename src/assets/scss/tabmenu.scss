@@ -1,11 +1,17 @@
+/*GNB 관련 scss*/
 .logo{
   width:163px;
   height : 70px;
   float : left;
-  span{
+  a > span{
     font-size: 12px;
     display: block;
     text-align: right;
+    text-decoration: none;
+    color: black;
+  }
+  a{
+    text-decoration:none !important
   }
   img{
     vertical-align:bottom;
@@ -21,7 +27,14 @@
   margin: 0 auto;
 }
 .header {
+  min-width: 1500px;
+  z-index: 999;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
 }
 .nav_menu{
   margin-left : 100px;
@@ -29,7 +42,7 @@
   height : 46px;
   margin : 0, auto;
   float : left;
-  min-width : 480px;
+  min-width : 600px;
   a {
     position: relative;
     top: 10px;
@@ -40,33 +53,7 @@
     /*font-weight: bold;*/
     color: #2c3e50;
     margin-right : 50px;
+  //    border-bottom: 5px solid gold
   }
-}
-.nav_menu{
-  margin-left : 100px;
-  width : 50%;
-  height : 46px;
-  margin : 0, auto;
-  float : left;
-  min-width : 480px;
-  a {
-    position: relative;
-    top: 10px;
-    display:inline-block;
-    height:70px;
-    text-decoration : none;
-    font-size : 20px;
-    /*font-weight: bold;*/
-    color: #2c3e50;
-    margin-right : 50px;
-  }
-}
-.nav {
-  padding-top : 20px;
-  width: 70%;
-  height : 60px;
-  margin: 0 auto;
-}
-.header {
-  width: 100%;
+
 }
