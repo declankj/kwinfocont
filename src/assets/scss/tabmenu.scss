@@ -39,7 +39,7 @@
 .nav_menu{
   margin-left : 100px;
   width : 50%;
-  height : 46px;
+  height : 100%;
   margin : 0, auto;
   float : left;
   min-width : 600px;
@@ -47,7 +47,7 @@
     position: relative;
     top: 10px;
     display:inline-block;
-    height:70px;
+    height:65px;
     text-decoration : none;
     font-size : 20px;
     /*font-weight: bold;*/
@@ -55,5 +55,7 @@
     margin-right : 50px;
   //    border-bottom: 5px solid gold
   }
-
+   a:hover {
+      border-bottom: 5px solid #820000
+   }
 }

@@ -60,7 +60,6 @@
 </template>
 <script>
 import { Slider, SliderItem } from 'vue-easy-slider'
-import info from '@/components/tabMenu.vue'
 export default {
   name: 'App',
   components: {
