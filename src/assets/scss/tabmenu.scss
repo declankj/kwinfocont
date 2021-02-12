@@ -1,24 +1,25 @@
 /*GNB 관련 scss*/
-.logo{
-  width:163px;
-  height : 70px;
-  float : left;
-  a > span{
-    font-size: 12px;
-    display: block;
-    text-align: right;
-    text-decoration: none;
-    color: black;
-  }
-  a{
-    text-decoration:none !important
-  }
-  img{
-    vertical-align:bottom;
-    margin:0;
-    width:163px;
-    height:46px;
-  }
+
+.logo {
+    width: 120px;
+    height: 60px;
+    float: left;
+    a>span {
+        font-size: 12px;
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        color: black;
+    }
+    a {
+        text-decoration: none !important
+    }
+    img {
+        vertical-align: bottom;
+        margin: 0;
+        width: 120px;
+        height: 60px;
+    }
 }
 .nav {
   padding-top : 20px;

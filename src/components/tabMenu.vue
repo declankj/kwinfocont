@@ -3,7 +3,7 @@
       <div class="nav" >
         <div class="logo">
           <router-link to="/">
-          <img alt="Kwangwoon Logo" src="../assets/img/logo.gif" />
+          <img alt="Kwangwoon Logo" src="../assets/img/iconLogo.png" />
           <span>정보콘텐츠학과</span>
           </router-link>
         </div>
