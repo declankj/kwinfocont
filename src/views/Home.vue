@@ -1,20 +1,8 @@
 <template>
-
   <div id="home">
     <div id="app">
-      <Slider
-        animation="fade"
-        v-model="sliderValue"
-        :duration="5000"
-        :speed="1000"
-        style="height:400px"
-      >
-        <SliderItem
-          v-for="(i, index) in list"
-          :key="index"
-          @click="changeIndex(1);"
-          :style="i"
-        >
+      <Slider animation="fade" v-model="sliderValue" :interval="20000" :duration="5000" :speed="1000" style="height:400px">
+        <SliderItem v-for="(i, index) in list" :key="index" @click="changeIndex(1);" :style="i">
           <p style="line-height: 280px; font-size: 5rem; text-align: center;">
             Page  {{i.backgroundColor}}
           </p>
