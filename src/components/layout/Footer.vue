@@ -1,8 +1,13 @@
 <template lang="pug">
-div
-  router-view
+v-footer.grey
+    v-row
 </template>
-<script lang="ts">
+
+<script>
 export default {
 }
 </script>
+
+<style>
+
+</style>
