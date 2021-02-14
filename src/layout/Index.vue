@@ -20,10 +20,30 @@ export default {
     return {
       logo: '/',
       menus: [
-        { title: '학과소개', path: '/' },
-        { title: '교육과정', path: '/' },
-        { title: '학사행정', path: '/' },
-        { title: '커뮤니티', path: '/' }
+        {
+          name: '학과소개',
+          child: [
+            { name: '학과장 인사말', path: 'greet' }
+          ]
+        },
+        {
+          name: '교육과정',
+          child: [
+            { name: '커리큘럼', path: '' }
+          ]
+        },
+        {
+          name: '학사행정',
+          child: [
+            { name: '학사일정', path: '' }
+          ]
+        },
+        {
+          name: '커뮤니티',
+          child: [
+            { name: '공지사항', path: '' }
+          ]
+        }
       ]
     }
   }
