@@ -23,7 +23,7 @@ export default {
         {
           name: '학과소개',
           child: [
-            { name: '학과장 인사말', path: 'greet' }
+            { name: '학과장 인사말', path: 'About' }
           ]
         },
         {

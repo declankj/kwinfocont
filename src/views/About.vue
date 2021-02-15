@@ -1,5 +1,17 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<template lang="pug">
+v-container.pa-0
+  section-alt
 </template>
+
+<script>
+export default {
+  name: 'About',
+  components: {
+    SectionAlt: () => import('./section/about/SectionAlt.vue')
+  }
+}
+</script>
+
+<style>
+
+</style>
