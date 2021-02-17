@@ -1,14 +1,10 @@
 <template lang="pug">
-v-container.pa-0
-  section-alt
+v-container
 </template>
 
 <script>
 export default {
-  name: 'About',
-  components: {
-    SectionAlt: () => import('./section/about/SectionAlt.vue')
-  }
+  name: 'About'
 }
 </script>
 

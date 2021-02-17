@@ -5,11 +5,6 @@ Vue.use(VueRouter)
 // 주소별 페이지 라우팅 정의
 const users: Array<RouteConfig> = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue')
-  },
-  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
@@ -23,6 +18,17 @@ const router = new VueRouter({
     {
       path: '/',
       component: () => import('../layout/Index.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'Home',
+          component: () => import('../views/Home.vue')
+        }
+      ]
+    },
+    {
+      path: '/',
+      component: () => import('../layout/Pager.vue'),
       children: users
     }
   ]

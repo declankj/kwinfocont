@@ -11,15 +11,16 @@ div
       v-menu(v-for="(item, i) in menus" :key="i" open-on-hover offset-y)
         template(v-slot:activator="{ on }")
           v-btn.white(text exact v-on="on") {{ item.name }}
-        v-list
+        v-list(tile)
           v-list-item(v-for="(sub, j) in item.child" :key="j")
-            v-btn(text @click="onclick(sub.path)") {{ sub.name }}
+            v-btn(text @click="onclick(sub.path, i)") {{ sub.name }}
     v-spacer.hidden-sm-and-down
     v-app-bar-nav-icon.hidden-md-and-up(@click="drawer = !drawer")
   app-drawer(v-model="drawer" :menus="menus")
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import AppDrawer from './Drawer.vue'
 export default {
   name: 'AppBar',
@@ -27,11 +28,12 @@ export default {
     AppDrawer
   },
   props: {
-    logo: String,
-    menus: Array
+    logo: String
   },
+  computed: { ...mapState(['menus']) },
   methods: {
-    onclick (target) {
+    onclick (target, index) {
+      this.$store.dispatch('changeMenu', { index })
       this.$router.push({ name: target })
     }
   },
