@@ -13,7 +13,7 @@ div
           v-btn.white(text exact v-on="on") {{ item.name }}
         v-list(tile)
           v-list-item(v-for="(sub, j) in item.child" :key="j")
-            v-btn(text @click="onclick(sub.path, i)") {{ sub.name }}
+            v-btn(text @click="onclick(sub.path, i, j)") {{ sub.name }}
     v-spacer.hidden-sm-and-down
     v-app-bar-nav-icon.hidden-md-and-up(@click="drawer = !drawer")
   app-drawer(v-model="drawer" :menus="menus")
@@ -32,8 +32,8 @@ export default {
   },
   computed: { ...mapState(['menus']) },
   methods: {
-    onclick (target, index) {
-      this.$store.dispatch('changeMenu', { index })
+    onclick (target, index, child) {
+      this.$store.dispatch('changeMenu', { index, child })
       this.$router.push({ name: target })
     }
   },

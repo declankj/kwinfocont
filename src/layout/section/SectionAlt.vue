@@ -1,6 +1,6 @@
 <template lang="pug">
   section#page-alt
-    base-alt(:title="menus[menuIndex].name" :filename="menus[menuIndex].img")
+    base-alt(:title="menus[menuIndex.main].child[menuIndex.child].name" :filename="menus[menuIndex.main].img")
 </template>
 
 <script>

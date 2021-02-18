@@ -1,11 +1,16 @@
 const menuState = {
-  menuIndex: 0,
+  menuIndex: {
+    main: 0,
+    child: 0
+  },
   menus: [
     {
       name: '학과소개',
       img: 'visual02.jpg',
       child: [
-        { name: '학과장 인사말', path: 'About' }
+        { name: '학과장 인사말', path: 'About' },
+        { name: '연혁', path: 'About' },
+        { name: '교수 소개', path: 'About' }
       ]
     },
     {

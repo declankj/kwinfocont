@@ -1,6 +1,6 @@
 <template lang="pug">
   section#aside-menu
-    base-aside(:menus="menus[menuIndex].child")
+    base-aside(:title="menus[menuIndex.main].name" :menus="menus[menuIndex.main].child")
 </template>
 
 <script>

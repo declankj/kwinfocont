@@ -1,8 +1,6 @@
 <template lang="pug">
-div.base-section-heading
-  h1.text-h3.font-weight-500.mb-2.text-center {{ title }}
-  v-responsive.primary.mx-auto.base-divider(max-width="28" v-bind="$attrs" v-on="$listeners")
-      v-divider(mb="6")
+div.base-header
+  h1.text-h3.font-weight-500.text-center {{ title }}
 </template>
 
 <script>
@@ -13,9 +11,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.v-divider {
-    border-width: 2px 0 0 0 !important
-}
-</style>
