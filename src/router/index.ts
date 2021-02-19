@@ -8,6 +8,11 @@ const users: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
+  },
+  {
+    path: '/curriculum',
+    name: 'Curriculum',
+    component: () => import('../views/Curriculum.vue')
   }
 ]
 

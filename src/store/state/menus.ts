@@ -17,7 +17,7 @@ const menuState = {
       name: '교육과정',
       img: 'visual02.jpg',
       child: [
-        { name: '커리큘럼', path: '' }
+        { name: '커리큘럼', path: 'Curriculum' }
       ]
     },
     {
