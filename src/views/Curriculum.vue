@@ -3,7 +3,7 @@
     <v-flex xs12 class="text-xs-center display-1 font-weight-black my-2"
       >커리큘럼</v-flex
     >
-    <v-tabs color="cyan" slider-color="purple darken-4">
+    <v-tabs color="cyan" slider-color="red darken-4">
       <v-tab
         v-for="(item, idx) in items"
         :key="item.title"
@@ -15,7 +15,7 @@
         :key="item.title"
         :value="'tab-' + idx"
       >
-        <v-card flat height="400px" color="grey lighten-4">
+        <v-card flat height="400px">
           <v-card-title primary-title>
                 <table id="list">
                     <thead>
