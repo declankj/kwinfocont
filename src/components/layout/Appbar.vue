@@ -3,7 +3,7 @@ div
   v-app-bar.white(app height="80" elevation="1")
     v-spacer
     v-toolbar-title
-      router-link(:to="logo" tag="span" style="cursor: pointer")
+      router-link(to="/" tag="span" style="cursor: pointer")
         v-img.shrink.ma-0(:src="require('../../assets/img/logo.gif')" transition='scale-transition')
         p.text-caption.text-end.ma-0.font-weight-bold 정보콘텐츠학과
     v-spacer
@@ -26,9 +26,6 @@ export default {
   name: 'AppBar',
   components: {
     AppDrawer
-  },
-  props: {
-    logo: String
   },
   computed: { ...mapState(['menus']) },
   methods: {

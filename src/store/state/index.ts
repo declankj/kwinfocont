@@ -1,5 +1,7 @@
 import stateMenu from './menus'
+import stateHistory from './history'
 const state = {
-  ...stateMenu
+  ...stateMenu,
+  ...stateHistory
 }
 export default state

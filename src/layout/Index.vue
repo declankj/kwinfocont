@@ -1,6 +1,6 @@
 <template lang="pug">
   v-app
-    app-bar(:logo='logo')
+    app-bar
     v-main
       router-view
     app-footer
@@ -15,17 +15,6 @@ export default {
   components: {
     AppBar,
     AppFooter
-  },
-  data () {
-    return {
-      logo: '/'
-    }
   }
 }
 </script>
-
-<style>
-  #app {
-  color: ##B71C1C;
-}
-</style>

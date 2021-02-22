@@ -1,5 +1,5 @@
 <template lang="pug">
-section#slider
+section#section-slider
   v-carousel(cycle interval="2000" hide-delimiter-background height="400" show-arrows-on-hover)
     v-carousel-item(v-for="(color, i) in colors" :key="color")
       v-sheet(:color="color" height="100%" tile)
@@ -9,6 +9,7 @@ section#slider
 
 <script>
 export default {
+  name: 'SectionSlider',
   data: () => ({
     model: 0,
     colors: [

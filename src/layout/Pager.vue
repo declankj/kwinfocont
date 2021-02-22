@@ -1,35 +1,26 @@
 <template lang="pug">
-  v-app
-    app-bar(:logo='logo')
-    v-main
-      v-container.pa-0
-        section-alt
-        v-row(no-gutters)
-          v-col(md="3").hidden-md-and-down
-            section-aside
-          v-col(md="9")
+v-container.pa-0
+  v-row(no-gutters justify="center")
+    v-col(cols="12")
+      section-alt
+    v-col(md="10")
+      v-row
+        v-col(xl="2" lg="3" md="4").hidden-sm-and-down
+          section-aside
+        v-col
+          v-container.pa-4
             router-view
-    app-footer
 </template>
 
 <script>
-import AppBar from '../components/layout/Appbar.vue'
-import AppFooter from '../components/layout/Footer.vue'
 import SectionAlt from './section/SectionAlt.vue'
 import SectionAside from './section/SectionAside.vue'
 export default {
   metaInfo: { title: 'Login' },
-  name: 'App',
+  name: 'Pager',
   components: {
-    AppBar,
-    AppFooter,
     SectionAlt,
     SectionAside
-  },
-  data () {
-    return {
-      logo: '/'
-    }
   }
 }
 </script>

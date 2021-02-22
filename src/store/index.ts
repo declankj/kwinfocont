@@ -7,14 +7,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state,
   mutations: {
-    chageMenu (state, { index, child }) {
-      state.menuIndex.main = index
+    changeMenu (state, { index, child }) {
+      state.menuIndex.main = index === -1 ? state.menuIndex.main : index
       state.menuIndex.child = child
     }
   },
   actions: {
-    chageMenu ({ commit }, { index, child }) {
-      commit('chageMenu', { index, child })
+    changeMenu ({ commit }, { index, child }) {
+      commit('changeMenu', { index, child })
     }
   },
   modules: {

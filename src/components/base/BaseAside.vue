@@ -1,16 +1,18 @@
 <template lang="pug">
-v-row(justify="end")
-  v-col(cols="7")
-    v-card.ma-0(width="252" tile elevation="0")
-      v-img(:src="require('../../assets/img/sub_tit_bg.jpg')")
-        v-row.ma-0.fill-height.text-center(align="center" justify="center")
-          v-col(cols="12")
-            base-sub-header(:title="title")
-      v-list.pa-0
-        template(v-for="(item, i) in menus")
-          v-list-item(:key="i" link)
-            v-list-item-title {{item.name}}
-          v-divider.aside-menu
+//- v-row.pa-3(justify="end")
+v-card.ma-0(tile elevation="0")
+  v-img(:src="require('../../assets/img/sub_tit_bg.jpg')")
+    v-row.ma-0.fill-height.text-center(align="center" justify="center")
+      v-col(cols="12")
+        base-sub-header(:title="title")
+  v-list.pa-0
+    v-list-item-group(v-model="message")
+      template(v-for="(item, i) in menus")
+        v-list-item(:key="i")
+          v-list-item-title {{item.name}}
+          v-list-item-icon
+            v-icon mdi-arrow-right
+        v-divider.aside-menu
 </template>
 
 <script>
@@ -18,6 +20,17 @@ export default {
   name: 'BaseAside',
   components: {
     BaseSubHeader: () => import('./BaseSubHeader.vue')
+  },
+  computed: {
+    message: {
+      get () {
+        return this.$store.state.menuIndex.child
+      },
+      set (value) {
+        this.$store.dispatch('changeMenu', { index: -1, child: value })
+        this.$router.push({ name: this.menus[value].path })
+      }
+    }
   },
   props: {
     title: String,

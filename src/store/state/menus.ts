@@ -9,8 +9,8 @@ const menuState = {
       img: 'visual02.jpg',
       child: [
         { name: '학과장 인사말', path: 'About' },
-        { name: '연혁', path: 'About' },
-        { name: '교수 소개', path: 'About' }
+        { name: '연혁', path: 'History' },
+        { name: '교수 소개', path: '' }
       ]
     },
     {
@@ -34,6 +34,12 @@ const menuState = {
         { name: '공지사항', path: '' }
       ]
     }
+  ],
+  footer: [
+    { name: '개인정보처리방침', link: './' },
+    { name: '이메일 무단 수집 거부', link: './' },
+    { name: '광운대학교 홈페이지', link: './' },
+    { name: '강의실 현황', link: './' }
   ]
 }
 
