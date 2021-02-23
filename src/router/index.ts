@@ -1,52 +1,49 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-// 페이지별 component 를 import
-import Home from '../views/Home.vue'
-import Info from '../views/Info.vue'
-import Bachelor from '../views/Bachelor.vue'
-import Curriculum from '../views/Curriculum.vue'
-import Community from '../views/Community.vue'
-import Apply from '../views/Apply.vue'
 
 Vue.use(VueRouter)
 // 주소별 페이지 라우팅 정의
-const routes: Array<RouteConfig> = [
+const users: Array<RouteConfig> = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About.vue')
   },
   {
-    path: '/info',
-    name: 'Info',
-    component: Info
-  },
-  {
-    path: '/bachelor',
-    name: 'bachelor',
-    component: Bachelor
+    path: '/history',
+    name: 'History',
+    component: () => import('../views/History.vue')
   },
   {
     path: '/curriculum',
-    name: 'curriculum',
-    component: Curriculum
-  },
-  {
-    path: '/community',
-    name: 'community',
-    component: Community
-  },
-  {
-    path: '/apply',
-    name: 'apply',
-    component: Apply
+    name: 'Curriculum',
+    component: () => import('../views/Curriculum.vue')
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: [
+    {
+      path: '/',
+      component: () => import('../layout/Index.vue'),
+      children: [
+        // Homepage Index
+        {
+          path: '/',
+          name: 'Home',
+          component: () => import('../views/Home.vue')
+        },
+        // Otherpage Index
+        {
+          path: '/',
+          component: () => import('../layout/Pager.vue'),
+          children: users
+        }
+      ]
+    }
+  ]
 })
 
 export default router
