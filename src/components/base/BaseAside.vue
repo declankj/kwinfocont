@@ -6,7 +6,7 @@ v-card.ma-0(tile elevation="0")
       v-col(cols="12")
         base-sub-header(:title="title")
   v-list.pa-0
-    v-list-item-group(v-model="message")
+    v-list-item-group(v-model="menu")
       template(v-for="(item, i) in menus")
         v-list-item(:key="i")
           v-list-item-title {{item.name}}
@@ -22,7 +22,7 @@ export default {
     BaseSubHeader: () => import('./BaseSubHeader.vue')
   },
   computed: {
-    message: {
+    menu: {
       get () {
         return this.$store.state.menuIndex.child
       },
