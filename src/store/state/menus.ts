@@ -10,7 +10,7 @@ const menuState = {
       child: [
         { name: '학과장 인사말', path: 'About' },
         { name: '연혁', path: 'History' },
-        { name: '교수 소개', path: '' }
+        { name: '교수 소개', path: 'Member' }
       ]
     },
     {

@@ -15,6 +15,11 @@ const users: Array<RouteConfig> = [
     component: () => import('../views/History.vue')
   },
   {
+    path: '/Member',
+    name: 'Member',
+    component: () => import('../views/Member.vue')
+  },
+  {
     path: '/curriculum',
     name: 'Curriculum',
     component: () => import('../views/Curriculum.vue')
