@@ -38,3 +38,5 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Don't see [DONT_README](DONTREADME.md).
