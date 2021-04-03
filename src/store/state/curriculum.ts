@@ -1,18 +1,12 @@
 const curriculumState = {
   curriculum: {
     main: {
-      title: '커리큘럼1',
-      curriculum: [
-        { time: '1971', content: '커리큘럼1' },
-        { time: '1971', content: '커리큘럼2' },
-        { time: '1971', content: '커리큘럼3' }
-      ]
+      title: '2021년도 기준'
     }
   },
-  items: [
+  subjects: [
     {
       title: '1학년',
-      text: '각 나라, 도시별로 특색있는 음식 맛보기',
       curriculums: [{
         subject: '문화콘텐츠의 이해',
         professor: '정형원',
