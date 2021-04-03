@@ -3,8 +3,8 @@
     v-container(fluid)
     v-flex
     v-tabs(color='cyan' slider-color='red darken-4')
-      v-tab(v-for='(item, idx) in items' :key='item.title' :href='\'#tab-\' + idx') {{ item.title }}
-      v-tab-item(v-for='(item, idx) in items' :key='item.title' :value='\'tab-\' + idx')
+      v-tab(v-for='(item, idx) in subjects' :key='item.title' :href='\'#tab-\' + idx') {{ item.title }}
+      v-tab-item(v-for='(item, idx) in subjects' :key='item.title' :value='\'tab-\' + idx')
         v-card(flat)
           v-card-title(primary-title)
             .columns(v-for='curriculum in item.curriculums' :key='curriculum.subject')
@@ -22,7 +22,7 @@ export default {
   name: 'BaseCurriculum',
   props: {
     curriculum: Array,
-    items: Object
+    subjects: Object
   }
 }
 </script>

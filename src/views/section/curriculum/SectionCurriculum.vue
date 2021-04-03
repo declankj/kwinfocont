@@ -1,7 +1,7 @@
 <template lang="pug">
   section#section-curriculum
     base-small-title(:title="title")
-    base-curriculum(:curriculum="curriculum" :items="items")
+    base-curriculum(:curriculum="curriculum" :subjects="subjects")
 </template>
 
 <script>
@@ -17,14 +17,9 @@ export default {
         return this.$store.state.curriculum.main.title
       }
     },
-    curriculum: {
+    subjects: {
       get () {
-        return this.$store.state.curriculum.main.curriculum
-      }
-    },
-    items: {
-      get () {
-        return this.$store.state.items
+        return this.$store.state.subjects
       }
     }
   }
