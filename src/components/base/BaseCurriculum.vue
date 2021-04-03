@@ -58,7 +58,9 @@ export default {
 .price .header {
   background-color: #77222d;
   color: white;
-  font-size: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 105px;
 }
 
 /* List items */
